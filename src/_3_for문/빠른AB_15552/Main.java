@@ -1,16 +1,19 @@
 package _3_for문.빠른AB_15552;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
-        int i = sc.nextInt();
+        int i = Integer.parseInt(bf.readLine());
 
         for (int j=0; j<i; j++){
-            int a = sc.nextInt();
-            int b = sc.nextInt();
+            String[] strs = bf.readLine().split(" ");
+            int a = Integer.parseInt(strs[0]);
+            int b = Integer.parseInt(strs[1]);
             System.out.println(a+b);
         }
     }
